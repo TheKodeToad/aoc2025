@@ -12,7 +12,7 @@ Both `day1` and `day1-part2` read from `input/day1.txt`.
 
 ## Day 2
 
-`make run-day2`
+`make run-day2`/`make run-day2-part2`
 
 In orthodox kotlin anything goes as long as it works without kotlin runtime libs.
 Oh, and it has to be built with a makefile (not any fancy new fangled thing like ant).
