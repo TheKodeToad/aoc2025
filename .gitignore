@@ -1,3 +1,2 @@
-*.o
-*.elf
-day1.txt
+target/
+input/

@@ -8,7 +8,6 @@ STDERR    equ 2
 
 section .bss
 	file_buf resb BUFSIZ ; file buffer
-	itoa_buf resb BUFSIZ
 
 section .data
 	file               dd  0                  ; file descriptor
@@ -21,7 +20,7 @@ section .data
 	finished_msg_len   equ $ - finished_msg
 
 section .text
-	filename           db  `day1.txt\0`
+	filename           db  `input/day1.txt\0`
 	open_error_msg     db  `failed to open file\n`
 	open_error_msg_len equ $ - open_error_msg
 
