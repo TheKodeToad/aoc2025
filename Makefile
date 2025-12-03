@@ -3,7 +3,7 @@
 
 TARGET_DIR = target
 
-all: $(TARGET_DIR)/day1 $(TARGET_DIR)/day1-part2 $(TARGET_DIR)/day2.class $(TARGET_DIR)/day3 $(TARGET_DIR)/day3-part2
+all: $(TARGET_DIR)/day1 $(TARGET_DIR)/day1-part2 $(TARGET_DIR)/day2.class $(TARGET_DIR)/day2-part2.class $(TARGET_DIR)/day3 $(TARGET_DIR)/day3-part2
 
 clean:
 	rm -rf $(TARGET_DIR)
@@ -25,10 +25,16 @@ run-day1-part2: $(TARGET_DIR)/day1-part2
 	$^
 
 $(TARGET_DIR)/day2.class: day2.kt
-	kotlinc -Xno-call-assertions -Xno-param-assertions -Xno-receiver-assertions day2.kt -d target
+	kotlinc -Xno-call-assertions -Xno-param-assertions -Xno-receiver-assertions $^ -d target
 
 run-day2: $(TARGET_DIR)/day2.class
 	java -cp target day2
+
+$(TARGET_DIR)/day2-part2.class: day2-part2.kt
+	kotlinc -Xno-call-assertions -Xno-param-assertions -Xno-receiver-assertions $^ -d target
+
+run-day2-part2: $(TARGET_DIR)/day2-part2.class
+	java -cp target day2-part2
 
 $(TARGET_DIR)/day3: day3.go
 	mkdir -p $(TARGET_DIR)
