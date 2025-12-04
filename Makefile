@@ -3,7 +3,7 @@
 
 TARGET_DIR = target
 
-all: $(TARGET_DIR)/day1 $(TARGET_DIR)/day1-part2 $(TARGET_DIR)/day2.class $(TARGET_DIR)/day2-part2.class $(TARGET_DIR)/day3 $(TARGET_DIR)/day3-part2
+all: $(TARGET_DIR)/day1 $(TARGET_DIR)/day1-part2 $(TARGET_DIR)/day2.class $(TARGET_DIR)/day2-part2.class $(TARGET_DIR)/day3 $(TARGET_DIR)/day3-part2 $(TARGET_DIR)/day4 $(TARGET_DIR)/day4-part2
 
 clean:
 	rm -rf $(TARGET_DIR)
@@ -48,4 +48,18 @@ $(TARGET_DIR)/day3-part2: day3-part2.go
 	go build -o $@ $^
 
 run-day3-part2: $(TARGET_DIR)/day3-part2
+	$^
+
+$(TARGET_DIR)/day4: day4.go
+	mkdir -p $(TARGET_DIR)
+	go build -o $@ $^
+
+run-day4: $(TARGET_DIR)/day4
+	$^
+
+$(TARGET_DIR)/day4-part2: day4-part2.go
+	mkdir -p $(TARGET_DIR)
+	go build -o $@ $^
+
+run-day4-part2: $(TARGET_DIR)/day4-part2
 	$^

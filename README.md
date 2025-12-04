@@ -22,3 +22,7 @@ Oh, and it has to be built with a makefile (not any fancy new fangled thing like
 `make run-day3`/`make run-day3-part2`
 
 ~~I skipped day 2.~~ (I went back and did it now) Go because I just wanted to focus on the challenge not the language this time.
+
+## Day 4
+
+Let's ramp things up... only import "C" is allowed (my solution isn't great but I'm glad to have earned my stars)
